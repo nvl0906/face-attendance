@@ -1,5 +1,0 @@
-.env
-__pycache__
-known_faces
-known_faces_embeddings
-*.xlsx
