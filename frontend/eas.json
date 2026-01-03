@@ -9,12 +9,14 @@
         "gradleCommand": ":app:assembleRelease"
       },
       "distribution": "internal",
+      "environment": "preview",
       "channel": "preview"
     },
     "production": {
       "android": {
         "buildType": "app-bundle"
       },
+      "environment": "production",
       "channel": "production"
     }
   },

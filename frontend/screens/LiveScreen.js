@@ -52,10 +52,10 @@ export default function LiveScreen({ route }) {
     if (isstarting) {
       const connectWebSocket = async () => {
         const token = await SecureStore.getItemAsync("accessToken");
+        const BACKEND_WS_URL = process.env.EXPO_PUBLIC_BACKEND_WS_URL;
         if (!token) return;
         
-        ws.current = new WebSocket(`wss://api.tmiattendance.dpdns.org/ws/v2/recognize?token=${token}`);
-
+        ws.current = new WebSocket(`${BACKEND_WS_URL}/ws/v2/recognize?token=${token}`);
         ws.current.onopen = () => {
           setWsConnected(true);
           console.log("WebSocket connected");

@@ -220,7 +220,7 @@ export default function UserScreen() {
     const fileUri = FileSystem.cacheDirectory + fileName;
 
     // Axios GET request with token
-    const BACKEND_URL = "https://api.tmiattendance.dpdns.org";
+    const BACKEND_URL = process.env.EXPO_PUBLIC_BACKEND_URL;;
     const response = await axios.get(`${BACKEND_URL}/v2/download`, {
       responseType: "arraybuffer", // binary data
       headers: { Authorization: `Bearer ${token}` },

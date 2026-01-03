@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as SecureStore from 'expo-secure-store';
 
-const BACKEND_URL = "https://api.tmiattendance.dpdns.org";
+const BACKEND_URL = process.env.EXPO_PUBLIC_BACKEND_URL;
 
 const api = axios.create({
   baseURL: BACKEND_URL,
