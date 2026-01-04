@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "ee8aafd7-984f-4dd9-95b3-b949caa9cdef"
+      }
+    },
+    "android": {
+      "package": "com.naval1170.tmi"
+    }
+  }
+}
