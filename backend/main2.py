@@ -68,7 +68,7 @@ load_dotenv()
 url: str = os.environ.get("SUPABASE_URL")
 key: str = os.environ.get("SUPABASE_KEY")
 JWT_SECRET = os.environ.get("JWT_SECRET")
-JWT_ALGORITHM = os.environ.get("JWT_ALGORITHM", "ES256")
+JWT_ALGORITHM = os.environ.get("JWT_ALGORITHM")
 supabase: Client = create_client(url, key)
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
